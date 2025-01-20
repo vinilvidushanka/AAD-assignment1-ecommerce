@@ -1,17 +1,13 @@
-<!DOCTYPE html>
+<%--
+  Created by IntelliJ IDEA.
+  User: User
+  Date: 1/20/2025
+  Time: 9:16 AM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-
 <head>
-    <!-- Basic -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Mobile Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <!-- Site Metas -->
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-
     <title>LUXYWatch</title>
 
 
@@ -27,16 +23,14 @@
     <link href="CSS/style.css" rel="stylesheet" />
     <!-- responsive style -->
     <link href="CSS/responsive.css" rel="stylesheet" />
-
 </head>
-
 <body class="sub_page">
 
 <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section long_section px-0">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
-            <a class="navbar-brand" href="home.html">
+            <a class="navbar-brand" href="home.jsp">
           <span>
             LUXYWatch
           </span>
@@ -50,22 +44,22 @@
                 <div class="d-flex mx-auto flex-column flex-lg-row align-items-center">
                     <ul class="navbar-nav  ">
                         <li class="nav-item ">
-                            <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html"> About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="shop.html">Shop</a>
+                            <a class="nav-link" href="home.jsp">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="category.html">Categories</a>
+                            <a class="nav-link" href="about.jsp"> About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact Us</a>
+                            <a class="nav-link" href="shop.jsp">Shop</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="cart.html">Cart</a>
+                            <a class="nav-link" href="category.jsp">Categories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.jsp">Contact Us</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="cart.jsp">Cart</a>
                         </li>
                     </ul>
                 </div>
@@ -89,75 +83,7 @@
 </div>
 
 
-<!-- blog section -->
 
-<section class="blog_section layout_padding">
-    <div class="container">
-        <div class="heading_container">
-            <h2>
-                Categories
-            </h2>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-lg-4 mx-auto">
-                <div class="box">
-                    <div class="img-box">
-                        <img src="images/images (4).jpg" alt="">
-                    </div>
-                    <div class="detail-box">
-                        <h5>
-                            Smart Watch
-                        </h5>
-                        <p>
-                            alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-                        </p>
-                        <a href="">
-                            Read More
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mx-auto">
-                <div class="box">
-                    <div class="img-box">
-                        <img src="images/download (2).jpg" alt="">
-                    </div>
-                    <div class="detail-box">
-                        <h5>
-                            Classic Watch
-                        </h5>
-                        <p>
-                            alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-                        </p>
-                        <a href="">
-                            Read More
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 mx-auto">
-                <div class="box">
-                    <div class="img-box">
-                        <img src="images/3-e1711870791227.png" alt="">
-                    </div>
-                    <div class="detail-box">
-                        <h5>
-                            Kids Watch
-                        </h5>
-                        <p>
-                            alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-                        </p>
-                        <a href="">
-                            Read More
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- end blog section -->
 
 <!-- info section -->
 <section class="info_section long_section">
@@ -192,12 +118,12 @@
                             QUICK LINKS
                         </h4>
                         <div class="info_links_menu">
-                            <a class="" href="home.html">Home <span class="sr-only">(current)</span></a>
-                            <a class="" href="about.html"> About</a>
-                            <a class="" href="shop.html">Shop</a>
-                            <a class="" href="category.html">Categories</a>
-                            <a class="" href="contact.html">Contact Us</a>
-                            <a class="" href="cart.html">Cart</a>
+                            <a class="" href="home.jsp">Home <span class="sr-only">(current)</span></a>
+                            <a class="" href="about.jsp"> About</a>
+                            <a class="" href="shop.jsp">Shop</a>
+                            <a class="" href="category.jsp">Categories</a>
+                            <a class="" href="contact.jsp">Contact Us</a>
+                            <a class="" href="cart.jsp">Cart</a>
                         </div>
                     </div>
                 </div>
@@ -261,5 +187,4 @@
 <!-- End Google Map -->
 
 </body>
-
 </html>

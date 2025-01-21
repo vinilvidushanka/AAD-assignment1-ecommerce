@@ -29,7 +29,7 @@
   <!-- header section strats -->
   <header class="header_section long_section px-0">
     <nav class="navbar navbar-expand-lg custom_nav-container ">
-      <a class="navbar-brand" href="home.jsp">
+      <a class="navbar-brand" href="adminHome.jsp">
           <span>
             LUXYWatch
           </span>
@@ -88,8 +88,8 @@
               <div class="col-md-5">
                 <div class="detail-box">
                   <h1>
-                    For All Your <br>
-                    Watch Needs
+                    Welcome to <br>
+                    Admin dashboard
                   </h1>
                   <p>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quidem maiores perspiciatis, illo maxime voluptatem a itaque suscipit.
@@ -563,9 +563,9 @@
 <!-- jQery -->
 <script src="assets/jquery-3.7.1.min.js"></script>
 <!-- bootstrap js -->
-<script src="js/bootstrap.js"></script>
+<script src="JS/bootstrap.js"></script>
 <!-- custom js -->
-<script src="js/custom.js"></script>
+<script src="JS/custom.js"></script>
 <!-- Google Map -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
 <!-- End Google Map -->

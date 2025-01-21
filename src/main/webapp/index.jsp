@@ -43,19 +43,19 @@
           </a>
         </div>
       </form>
-      <form action="#" class="sign-up-form">
+      <form action="user" class="sign-up-form" method="post">
         <h2 class="title">Sign up</h2>
         <div class="input-field">
           <i class="fas fa-user"></i>
-          <input type="text" placeholder="Username" />
+          <input type="text" placeholder="Username" name="name" id="name" required />
         </div>
         <div class="input-field">
           <i class="fas fa-envelope"></i>
-          <input type="email" placeholder="Email" />
+          <input type="email" placeholder="Email" name="email" id="email" required />
         </div>
         <div class="input-field">
           <i class="fas fa-lock"></i>
-          <input type="password" placeholder="Password" />
+          <input type="password" placeholder="Password" name="password" id="password" required />
         </div>
         <input type="submit" class="btn" value="Sign up" />
         <p class="social-text">Or Sign up with social platforms</p>
@@ -75,6 +75,25 @@
         </div>
       </form>
     </div>
+    <% String message = request.getParameter("message");
+      String error = request.getParameter("error");
+    %>
+
+    <%
+      if (message != null) {
+    %>
+
+    <div style="color: green"><%= message %></div>
+
+    <% } %>
+
+    <%
+      if (error != null) {
+    %>
+
+    <div style="color: red"><%= message %></div>
+
+    <% } %>
   </div>
 
   <div class="panels-container">
@@ -107,6 +126,7 @@
   </div>
 </div>
 
+<script src="assets/jquery-3.7.1.min.js"></script>
 <script src="JS/index.js"></script>
 </body>
 </html>

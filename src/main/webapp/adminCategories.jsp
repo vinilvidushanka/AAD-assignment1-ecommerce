@@ -1,4 +1,5 @@
-<%--
+<%@ page import="lk.ijse.aadassignment1ecommerce.DTO.CategoryDTO" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: User
   Date: 1/21/2025
@@ -10,6 +11,19 @@
 <head>
   <title>LUXYWatch</title>
 
+  <style>
+    table{
+      border-collapse: collapse;
+      width: 100%;
+    }
+    table, th, td {
+      border: 1px solid black;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+  </style>
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="CSS/bootstrap.css" />
@@ -85,7 +99,84 @@
   <!-- end header section -->
 </div>
 
+<form action="Categories" method="post" class="row g-3 m-5" >
+  <div class="col-md-6">
+    <label for="categoryId" class="form-label">Category Id</label>
+    <input type="text" class="form-control" id="categoryId">
+  </div>
+  <div class="col-md-6">
+    <label for="categoryName" class="form-label">Name</label>
+    <input type="text" class="form-control" id="categoryName">
+  </div>
+  <div class="col-12">
+    <label for="categoryDesc" class="form-label">Description</label>
+    <input type="text" class="form-control" id="categoryDesc">
+  </div>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary mt-3">Save</button>
+    <button type="submit" class="btn btn-primary mt-3">Update</button>
+    <button type="danger" class="btn btn-primary mt-3">Delete</button>
+  </div>
+</form>
 
+<%
+  String message = request.getParameter("message");
+  String error = request.getParameter("error");
+%>
+
+<%
+  if (message != null) {
+%>
+<div style="color: green"><%=message%> </div>
+<%
+  }
+%>
+
+<%
+  if (error != null) {
+%>
+<div style="color: red"><%=error%> </div>
+<%
+  }
+%>
+
+<div class="m-5"><h3>Category list</h3></div>
+
+<div class="m-5">
+
+  <%
+    List<CategoryDTO> categories = (List<CategoryDTO>) request.getAttribute("categories");
+
+    if(categories != null && !categories.isEmpty()) {
+
+  %>
+  <table>
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <%
+      for (CategoryDTO category : categories) {
+    %>
+    <tr>
+      <td><%= category.getId() %></td>
+      <td><%= category.getName() %></td>
+      <td><%= category.getDescription() %></td>
+    </tr>
+    <%
+      }
+    %>
+    </tbody>
+  </table>
+  <%
+    }
+  %>
+
+</div>
 
 
 <!-- info section -->

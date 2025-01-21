@@ -45,9 +45,6 @@
               <a class="nav-link" href="adminHome.jsp">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="adminCustomer.jsp"> Customers</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="adminItems.jsp">Items</a>
             </li>
             <li class="nav-item">

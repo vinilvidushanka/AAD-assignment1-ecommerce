@@ -61,9 +61,6 @@
               <a class="nav-link" href="adminHome.jsp">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="adminCustomer.jsp"> Customers</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="adminItems.jsp">Items</a>
             </li>
             <li class="nav-item active">
@@ -99,16 +96,14 @@
   <!-- end header section -->
 </div>
 
+<div class="m-5"><h4>Add Category</h4></div>
+
 <form action="Categories" method="post" class="row g-3 m-5" >
   <div class="col-md-6">
-    <label for="categoryId" class="form-label">Category Id</label>
-    <input type="text" class="form-control" id="categoryId">
-  </div>
-  <div class="col-md-6">
-    <label for="categoryName" class="form-label">Name</label>
+    <label for="categoryName" class="form-label">Category Name</label>
     <input type="text" class="form-control" id="categoryName">
   </div>
-  <div class="col-12">
+  <div class="col-md-6">
     <label for="categoryDesc" class="form-label">Description</label>
     <input type="text" class="form-control" id="categoryDesc">
   </div>

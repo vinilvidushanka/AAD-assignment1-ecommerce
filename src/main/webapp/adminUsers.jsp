@@ -47,9 +47,6 @@
                             <a class="nav-link" href="adminHome.jsp">Home </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="adminCustomer.jsp"> Customers</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="adminItems.jsp">Items</a>
                         </li>
                         <li class="nav-item">
@@ -85,7 +82,35 @@
     <!-- end header section -->
 </div>
 
+<div class="m-5"><h4>Add User</h4></div>
 
+<form class="row g-3 m-5">
+    <div class="col-md-6">
+        <label for="userName" class="form-label">User Name</label>
+        <input type="text" class="form-control" id="userName">
+    </div>
+    <div class="col-md-6">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email">
+    </div>
+    <div class="col-md-6">
+        <label for="inputRole" class="form-label">Role</label><br>
+        <select id="inputRole" class="form-select">
+            <option selected>Choose...</option>
+            <option>Admin</option>
+            <option>User</option>
+        </select>
+    </div>
+    <div class="col-md-6">
+        <label for="password" class="form-label">Password</label>
+        <input type="text" class="form-control" id="password">
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary mt-3">Save</button>
+        <button type="submit" class="btn btn-primary mt-3">Update</button>
+        <button type="danger" class="btn btn-primary mt-3">Delete</button>
+    </div>
+</form>
 
 
 <!-- info section -->

@@ -46,9 +46,6 @@
                         <li class="nav-item">
                             <a class="nav-link" href="adminHome.jsp">Home <span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="adminCustomer.jsp"> Customers</a>
-                        </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="adminItems.jsp">Items</a>
                         </li>
@@ -85,7 +82,35 @@
     <!-- end header section -->
 </div>
 
+<div class="m-5"><h4>Add Item</h4></div>
 
+<form action="Item" method="post" class="row g-3 m-5" >
+    <div class="col-md-6">
+        <label for="itemName" class="form-label">Item Name</label>
+        <input type="text" class="form-control" id="itemName">
+    </div>
+    <div class="col-md-6">
+        <label for="categoryDesc" class="form-label">Description</label>
+        <input type="text" class="form-control" id="categoryDesc">
+    </div>
+    <div class="col-md-4">
+        <label for="price" class="form-label">Price</label>
+        <input type="text" class="form-control" id="price">
+    </div>
+    <div class="col-md-4">
+        <label for="stock" class="form-label">Stock</label>
+        <input type="number" class="form-control" id="stock">
+    </div>
+    <div class="col-md-4">
+        <label for="categoryId" class="form-label">Category Id</label>
+        <input type="text" class="form-control" id="categoryId">
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary mt-3">Save</button>
+        <button type="submit" class="btn btn-primary mt-3">Update</button>
+        <button type="danger" class="btn btn-primary mt-3">Delete</button>
+    </div>
+</form>
 
 
 <!-- info section -->

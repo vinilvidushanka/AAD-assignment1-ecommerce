@@ -9,7 +9,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.PreparedStatement;
 
-@WebServlet("/user")
+@WebServlet(name = "UserServlet", value = "/user")
 public class UserServlet extends HttpServlet {
     String DB_URL = "jdbc:mysql://localhost:3306/ecommerce";
     String DB_USER = "root";

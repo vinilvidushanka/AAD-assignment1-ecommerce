@@ -26,6 +26,7 @@
         <button class="btn transparent" class="btn solid">
           <a href="adminHome.jsp">Sign in</a>
         </button>
+
 <%--        <input type="submit" value="Login" class="btn solid" />--%>
         <p class="social-text">Or Sign in with social platforms</p>
         <div class="social-media">

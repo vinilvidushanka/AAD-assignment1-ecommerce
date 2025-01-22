@@ -564,7 +564,7 @@
 
 
 <!-- jQery -->
-<script src="js/jquery-3.4.1.min.js"></script>
+<script src="assets/jquery-3.7.1.min.js"></script>
 <!-- bootstrap js -->
 <script src="JS/bootstrap.js"></script>
 <!-- custom js -->

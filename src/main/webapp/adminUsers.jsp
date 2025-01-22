@@ -1,4 +1,5 @@
-<%--
+<%@ page import="lk.ijse.aadassignment1ecommerce.DTO.UserDTO" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: User
   Date: 1/21/2025
@@ -10,6 +11,19 @@
 <head>
     <title>LUXYWatch</title>
 
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
 
     <!-- bootstrap core css -->
     <link rel="stylesheet" type="text/css" href="CSS/bootstrap.css" />
@@ -84,18 +98,34 @@
 
 <div class="m-5"><h4>Add User</h4></div>
 
-<form class="row g-3 m-5">
+<%
+    String message = (String) session.getAttribute("message");
+    String alertType = (String) session.getAttribute("alertType");
+    if (message != null && alertType != null) {
+%>
+<script>
+    alert('<%= message %>');
+</script>
+<%
+        // Clear the session attributes after displaying the alert
+        session.removeAttribute("message");
+        session.removeAttribute("alertType");
+    }
+%>
+
+
+<form class="row g-3 m-5" action="user" method="post">
     <div class="col-md-6">
         <label for="userName" class="form-label">User Name</label>
-        <input type="text" class="form-control" id="userName">
+        <input type="text" name="userName" class="form-control" id="userName">
     </div>
     <div class="col-md-6">
         <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email">
+        <input type="email" name="email" class="form-control" id="email">
     </div>
     <div class="col-md-6">
         <label for="inputRole" class="form-label">Role</label><br>
-        <select id="inputRole" class="form-select">
+        <select id="inputRole" name="role" class="form-select">
             <option selected>Choose...</option>
             <option>Admin</option>
             <option>User</option>
@@ -103,7 +133,7 @@
     </div>
     <div class="col-md-6">
         <label for="password" class="form-label">Password</label>
-        <input type="text" class="form-control" id="password">
+        <input type="text" name="password" class="form-control" id="password">
     </div>
     <div class="col-12">
         <button type="submit" class="btn btn-primary mt-3">Save</button>
@@ -111,6 +141,43 @@
         <button type="danger" class="btn btn-primary mt-3">Delete</button>
     </div>
 </form>
+
+<h3 class="m-5">Users list</h3>
+
+<%
+    List<UserDTO> userList = (List<UserDTO>) request.getAttribute("users");
+    if(userList != null && !userList.isEmpty()) {
+
+%>
+<table class="m-5">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Password</th>
+    </tr>
+    </thead>
+    <tbody>
+    <%
+        for (UserDTO user : userList) {
+    %>
+    <tr>
+        <td><%= user.getId() %></td>
+        <td><%= user.getName() %></td>
+        <td><%= user.getEmail() %></td>
+        <td><%= user.getRole() %></td>
+        <td><%= user.getPassword() %></td>
+    </tr>
+    <%
+        }
+    %>
+    </tbody>
+</table>
+<%
+    }
+%>
 
 
 <!-- info section -->

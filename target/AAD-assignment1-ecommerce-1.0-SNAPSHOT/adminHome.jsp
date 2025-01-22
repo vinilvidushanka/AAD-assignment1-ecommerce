@@ -51,7 +51,7 @@
               <a class="nav-link" href="adminCategories.jsp">Categories</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="adminUsers.jsp">Users</a>
+              <a class="nav-link" href="user">Users</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="adminOrders.jsp">Orders</a>

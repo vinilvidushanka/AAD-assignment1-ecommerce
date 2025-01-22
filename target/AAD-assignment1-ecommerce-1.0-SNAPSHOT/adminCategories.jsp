@@ -98,14 +98,34 @@
 
 <div class="m-5"><h4>Add Category</h4></div>
 
+<%
+  String message = request.getParameter("message");
+  String error = request.getParameter("error");
+%>
+
+<% if (message != null) { %>
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <%= message %>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<% } %>
+
+<% if (error != null) { %>
+<div class="alert alert-danger alert-dismissible fade show" role="alert">
+  <%= error %>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<% } %>
+
+
 <form action="Categories" method="post" class="row g-3 m-5" >
   <div class="col-md-6">
     <label for="categoryName" class="form-label">Category Name</label>
-    <input type="text" class="form-control" id="categoryName">
+    <input type="text" name="categoryName" class="form-control" id="categoryName">
   </div>
   <div class="col-md-6">
     <label for="categoryDesc" class="form-label">Description</label>
-    <input type="text" class="form-control" id="categoryDesc">
+    <input type="text" name="categoryDesc" class="form-control" id="categoryDesc">
   </div>
   <div class="col-12">
     <button type="submit" class="btn btn-primary mt-3">Save</button>
@@ -114,39 +134,58 @@
   </div>
 </form>
 
-<%
-  String message = request.getParameter("message");
-  String error = request.getParameter("error");
-%>
 
-<%
-  if (message != null) {
-%>
-<div style="color: green"><%=message%> </div>
-<%
-  }
-%>
 
-<%
-  if (error != null) {
-%>
-<div style="color: red"><%=error%> </div>
-<%
-  }
-%>
+<%--<div class="m-5"><h3>Category list</h3></div>--%>
 
-<div class="m-5"><h3>Category list</h3></div>
+<%--<div class="m-5">--%>
+
+<%--  <%--%>
+<%--    List<CategoryDTO> categories = (List<CategoryDTO>) request.getAttribute("categories");--%>
+
+<%--    if(categories != null && !categories.isEmpty()) {--%>
+
+<%--  %>--%>
+<%--  <table>--%>
+<%--    <thead>--%>
+<%--    <tr>--%>
+<%--      <th>ID</th>--%>
+<%--      <th>Name</th>--%>
+<%--      <th>Description</th>--%>
+<%--    </tr>--%>
+<%--    </thead>--%>
+<%--    <tbody>--%>
+<%--    <%--%>
+<%--      for (CategoryDTO category : categories) {--%>
+<%--    %>--%>
+<%--    <tr>--%>
+<%--      <td><%= category.getId() %></td>--%>
+<%--      <td><%= category.getName() %></td>--%>
+<%--      <td><%= category.getDescription() %></td>--%>
+<%--    </tr>--%>
+<%--    <%--%>
+<%--      }--%>
+<%--    %>--%>
+<%--    </tbody>--%>
+<%--  </table>--%>
+<%--  <%--%>
+<%--    }--%>
+<%--  %>--%>
+
+<%--</div>--%>
 
 <div class="m-5">
+  <h3>Category List</h3>
+</div>
 
+<div class="m-5">
   <%
     List<CategoryDTO> categories = (List<CategoryDTO>) request.getAttribute("categories");
 
-    if(categories != null && !categories.isEmpty()) {
-
+    if (categories != null && !categories.isEmpty()) {
   %>
-  <table>
-    <thead>
+  <table class="table table-bordered table-striped table-hover">
+    <thead class="table-dark">
     <tr>
       <th>ID</th>
       <th>Name</th>
@@ -168,10 +207,14 @@
     </tbody>
   </table>
   <%
+  } else {
+  %>
+  <div class="alert alert-info">No categories available.</div>
+  <%
     }
   %>
-
 </div>
+
 
 
 <!-- info section -->

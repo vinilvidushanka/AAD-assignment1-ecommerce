@@ -11,6 +11,7 @@ import lk.ijse.aadassignment1ecommerce.DTO.CategoryDTO;
 import javax.sql.DataSource;
 import java.io.IOException;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ArrayList;
 
 @WebServlet(name = "CategoryServlet", value = "/Categories")
@@ -108,15 +109,14 @@ public class CategoryServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
             java.sql.Connection connection = dataSource.getConnection();
-            java.sql.Statement statement = connection.createStatement();
-            java.sql.ResultSet resultSet = statement.executeQuery("select * from categories");
+            ResultSet resultSet = connection.prepareStatement("select * from categories").executeQuery();
 
             ArrayList<CategoryDTO> categories = new ArrayList<>();
 
             while (resultSet.next()) {
-                int id = resultSet.getInt(1);
-                String name = resultSet.getString(2);
-                String description = resultSet.getString(3);
+                int id = resultSet.getInt("category_id");
+                String name = resultSet.getString("name");
+                String description = resultSet.getString("description");
 
                 CategoryDTO category = new CategoryDTO(id, name, description);
                 categories.add(category);

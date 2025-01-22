@@ -48,7 +48,7 @@
               <a class="nav-link" href="adminItems.jsp">Items</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="adminCategories.jsp">Categories</a>
+              <a class="nav-link" href="Categories">Categories</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="user">Users</a>

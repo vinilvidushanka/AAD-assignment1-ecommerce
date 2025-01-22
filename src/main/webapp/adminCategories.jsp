@@ -64,10 +64,10 @@
               <a class="nav-link" href="adminItems.jsp">Items</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="adminCategories.jsp">Categories </a>
+              <a class="nav-link" href="Categories">Categories </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="adminUsers.jsp">Users</a>
+              <a class="nav-link" href="user">Users</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="adminOrders.jsp">Orders</a>
@@ -136,85 +136,40 @@
 
 
 
-<%--<div class="m-5"><h3>Category list</h3></div>--%>
 
-<%--<div class="m-5">--%>
 
-<%--  <%--%>
-<%--    List<CategoryDTO> categories = (List<CategoryDTO>) request.getAttribute("categories");--%>
+<h3 class="m-5">Users list</h3>
 
-<%--    if(categories != null && !categories.isEmpty()) {--%>
+<%
+  List<CategoryDTO> categoryList = (List<CategoryDTO>) request.getAttribute("categories");
+  if(categoryList != null && !categoryList.isEmpty()) {
 
-<%--  %>--%>
-<%--  <table>--%>
-<%--    <thead>--%>
-<%--    <tr>--%>
-<%--      <th>ID</th>--%>
-<%--      <th>Name</th>--%>
-<%--      <th>Description</th>--%>
-<%--    </tr>--%>
-<%--    </thead>--%>
-<%--    <tbody>--%>
-<%--    <%--%>
-<%--      for (CategoryDTO category : categories) {--%>
-<%--    %>--%>
-<%--    <tr>--%>
-<%--      <td><%= category.getId() %></td>--%>
-<%--      <td><%= category.getName() %></td>--%>
-<%--      <td><%= category.getDescription() %></td>--%>
-<%--    </tr>--%>
-<%--    <%--%>
-<%--      }--%>
-<%--    %>--%>
-<%--    </tbody>--%>
-<%--  </table>--%>
-<%--  <%--%>
-<%--    }--%>
-<%--  %>--%>
-
-<%--</div>--%>
-
-<div class="m-5">
-  <h3>Category List</h3>
-</div>
-
-<div class="m-5">
+%>
+<table class="m-5">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Description</th>
+  </tr>
+  </thead>
+  <tbody>
   <%
-    List<CategoryDTO> categories = (List<CategoryDTO>) request.getAttribute("categories");
-
-    if (categories != null && !categories.isEmpty()) {
+    for (CategoryDTO category : categoryList) {
   %>
-  <table class="table table-bordered table-striped table-hover">
-    <thead class="table-dark">
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Description</th>
-    </tr>
-    </thead>
-    <tbody>
-    <%
-      for (CategoryDTO category : categories) {
-    %>
-    <tr>
-      <td><%= category.getId() %></td>
-      <td><%= category.getName() %></td>
-      <td><%= category.getDescription() %></td>
-    </tr>
-    <%
-      }
-    %>
-    </tbody>
-  </table>
-  <%
-  } else {
-  %>
-  <div class="alert alert-info">No categories available.</div>
+  <tr>
+    <td><%= category.getId() %></td>
+    <td><%= category.getName() %></td>
+    <td><%= category.getDescription() %></td>
+  </tr>
   <%
     }
   %>
-</div>
-
+  </tbody>
+</table>
+<%
+  }
+%>
 
 
 <!-- info section -->

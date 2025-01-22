@@ -14,7 +14,7 @@
     <style>
         table{
             border-collapse: collapse;
-            width: 100%;
+            width: 90%;
         }
         table, th, td {
             border: 1px solid black;
@@ -64,10 +64,10 @@
                             <a class="nav-link" href="adminItems.jsp">Items</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="adminCategories.jsp">Categories</a>
+                            <a class="nav-link" href="Categories">Categories</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="adminUsers.jsp">Users <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="user">Users <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="adminOrders.jsp">Orders</a>

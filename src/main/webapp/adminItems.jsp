@@ -1,4 +1,5 @@
-<%--
+<%@ page import="lk.ijse.aadassignment1ecommerce.DTO.ItemDTO" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: User
   Date: 1/21/2025
@@ -10,6 +11,19 @@
 <head>
     <title>LUXYWatch</title>
 
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 90%;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
 
     <!-- bootstrap core css -->
     <link rel="stylesheet" type="text/css" href="CSS/bootstrap.css" />
@@ -47,7 +61,7 @@
                             <a class="nav-link" href="adminHome.jsp">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="adminItems.jsp">Items</a>
+                            <a class="nav-link" href="Item">Items</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="Categories">Categories</a>
@@ -84,26 +98,45 @@
 
 <div class="m-5"><h4>Add Item</h4></div>
 
+<%
+    String message = (String) session.getAttribute("message");
+    String alertType = (String) session.getAttribute("alertType");
+    if (message != null && alertType != null) {
+%>
+<script>
+    alert('<%= message %>');
+</script>
+<%
+        // Clear the session attributes after displaying the alert
+        session.removeAttribute("message");
+        session.removeAttribute("alertType");
+    }
+%>
+
 <form action="Item" method="post" class="row g-3 m-5" >
-    <div class="col-md-6">
+    <div class="col-md-4">
         <label for="itemName" class="form-label">Item Name</label>
-        <input type="text" class="form-control" id="itemName">
+        <input type="text" name="itemName" class="form-control" id="itemName">
     </div>
-    <div class="col-md-6">
-        <label for="categoryDesc" class="form-label">Description</label>
-        <input type="text" class="form-control" id="categoryDesc">
+    <div class="col-md-4">
+        <label for="itemDesc" class="form-label">Description</label>
+        <input type="text" name="itemDesc" class="form-control" id="itemDesc">
+    </div>
+    <div class="col-md-4">
+        <label for="itemImg" class="form-label">Image</label>
+        <input type="file" name="itemImg" class="form-control" id="itemImg" accept="image/*">
     </div>
     <div class="col-md-4">
         <label for="price" class="form-label">Price</label>
-        <input type="text" class="form-control" id="price">
+        <input type="text" name="price" class="form-control" id="price">
     </div>
     <div class="col-md-4">
         <label for="stock" class="form-label">Stock</label>
-        <input type="number" class="form-control" id="stock">
+        <input type="number" name="stock" class="form-control" id="stock">
     </div>
     <div class="col-md-4">
         <label for="categoryId" class="form-label">Category Id</label>
-        <input type="text" class="form-control" id="categoryId">
+        <input type="text" name="categoryId" class="form-control" id="categoryId">
     </div>
     <div class="col-12">
         <button type="submit" class="btn btn-primary mt-3">Save</button>
@@ -111,6 +144,48 @@
         <button type="danger" class="btn btn-primary mt-3">Delete</button>
     </div>
 </form>
+
+
+<h3 class="m-5">Items list</h3>
+
+<%
+    List<ItemDTO> itemList = (List<ItemDTO>) request.getAttribute("items");
+    if(itemList != null && !itemList.isEmpty()) {
+
+%>
+<table class="m-5">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Stock</th>
+        <th>Category ID</th>
+        <th>Image</th>
+    </tr>
+    </thead>
+    <tbody>
+    <%
+        for (ItemDTO item : itemList) {
+    %>
+    <tr>
+        <td><%= item.getId() %></td>
+        <td><%= item.getName() %></td>
+        <td><%= item.getDescription() %></td>
+        <td><%= item.getPrice() %></td>
+        <td><%= item.getStock() %></td>
+        <td><%= item.getCategoryId() %></td>
+        <td><%= item.getImage() %></td>
+    </tr>
+    <%
+        }
+    %>
+    </tbody>
+</table>
+<%
+    }
+%>
 
 
 <!-- info section -->

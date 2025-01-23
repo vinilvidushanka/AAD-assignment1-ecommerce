@@ -16,42 +16,6 @@ import java.util.ArrayList;
 
 @WebServlet(name = "UserServlet", value = "/user")
 public class UserServlet extends HttpServlet {
-//    String DB_URL = "jdbc:mysql://localhost:3306/ecommerce";
-//    String DB_USER = "root";
-//    String DB_PASSWORD = "ijse@123";
-//
-//    @Override
-//    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        String name = req.getParameter("name");
-//        String email = req.getParameter("email");
-//        String password = req.getParameter("password");
-//        String role = req.getParameter("role");
-//
-//        try {
-//            Class.forName("com.mysql.cj.jdbc.Driver");
-//            java.sql.Connection connection = java.sql.DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-//            PreparedStatement preparedStatement = connection.prepareStatement("insert into users(username, email, role, password_hash) values(?, ?, ?, ?)");
-//            preparedStatement.setString(1, name);
-//            preparedStatement.setString(2, email);
-//            preparedStatement.setString(3, role);
-//            preparedStatement.setString(4, password);
-//            preparedStatement.executeUpdate();
-//
-//            int i=preparedStatement.executeUpdate();
-//            preparedStatement.close();
-//            connection.close();
-//
-//            if (i > 0) {
-//                resp.sendRedirect("index.jsp?message=User Added Successfully");
-//            }else {
-//                resp.sendRedirect("index.jsp?message=User Not Added");
-//            }
-//
-//        } catch (Exception e) {
-//            throw new RuntimeException(e);
-//        }
-//
-//    }
 
     @Resource(name = "java:comp/env/jdbc/pool")
     private DataSource dataSource;
@@ -72,15 +36,6 @@ public class UserServlet extends HttpServlet {
             preparedStatement.setString(4, password);
             preparedStatement.executeUpdate();
 
-//            int i=preparedStatement.executeUpdate();
-//            resp.sendRedirect("adminUsers.jsp");
-//            preparedStatement.close();
-//            connection.close();
-//            if (i > 0) {
-//                resp.sendRedirect("adminUsers.jsp");
-//            }else {
-//                resp.sendRedirect("adminUsers.jsp");
-//            }
 
             int rowsAffected = preparedStatement.executeUpdate();
 
@@ -130,4 +85,5 @@ public class UserServlet extends HttpServlet {
             resp.sendRedirect("adminUsers.jsp?error=An error occurred: " + e.getMessage());
         }
     }
+
 }

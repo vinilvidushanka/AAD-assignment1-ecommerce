@@ -148,11 +148,56 @@
 
 <h3 class="m-5">Items list</h3>
 
-<%
-    List<ItemDTO> itemList = (List<ItemDTO>) request.getAttribute("items");
-    if(itemList != null && !itemList.isEmpty()) {
+<%--<%--%>
+<%--    List<ItemDTO> itemList = (List<ItemDTO>) request.getAttribute("items");--%>
+<%--    if(itemList != null && !itemList.isEmpty()) {--%>
 
-%>
+<%--%>--%>
+<%--<table class="m-5">--%>
+<%--    <thead>--%>
+<%--    <tr>--%>
+<%--        <th>ID</th>--%>
+<%--        <th>Name</th>--%>
+<%--        <th>Description</th>--%>
+<%--        <th>Price</th>--%>
+<%--        <th>Stock</th>--%>
+<%--        <th>Category ID</th>--%>
+<%--        <th>Image</th>--%>
+<%--        <th>Action</th>--%>
+<%--    </tr>--%>
+<%--    </thead>--%>
+<%--    <tbody>--%>
+<%--    <%--%>
+<%--        for (ItemDTO item : itemList) {--%>
+<%--    %>--%>
+<%--    <tr>--%>
+<%--        <td><%= item.getId() %></td>--%>
+<%--        <td><%= item.getName() %></td>--%>
+<%--        <td><%= item.getDescription() %></td>--%>
+<%--        <td><%= item.getPrice() %></td>--%>
+<%--        <td><%= item.getStock() %></td>--%>
+<%--        <td><%= item.getCategoryId() %></td>--%>
+<%--&lt;%&ndash;        <td><%= item.getUrl() %></td>&ndash;%&gt;--%>
+<%--        <td>--%>
+<%--            <img src="./assets/images/<%= item.getUrl() %>" alt="<%= item.getName() %>" width="100" height="100">--%>
+<%--        </td>--%>
+
+<%--        <td>--%>
+<%--            <form action="Item" method="post">--%>
+<%--                <input type="hidden" name="action" value="delete">--%>
+<%--                <input type="hidden" name="i    temId" value="<%= item.getId() %>">--%>
+<%--                <button type="submit" class="btn btn-danger">--%>
+<%--                    <ion-icon name="trash"></ion-icon>--%>
+<%--                </button>--%>
+<%--            </form>--%>
+<%--        </td>--%>
+<%--    </tr>--%>
+<%--    <%--%>
+<%--        }--%>
+<%--    %>--%>
+<%--    </tbody>--%>
+<%--</table>--%>
+
 <table class="m-5">
     <thead>
     <tr>
@@ -163,28 +208,45 @@
         <th>Stock</th>
         <th>Category ID</th>
         <th>Image</th>
+        <th>Action</th>
     </tr>
     </thead>
     <tbody>
     <%
-        for (ItemDTO item : itemList) {
+        List<ItemDTO> itemList = (List<ItemDTO>) request.getAttribute("items");
+        System.out.println("itemList: " + itemList);
+        if (itemList != null) {
+            for (ItemDTO item : itemList) {
     %>
     <tr>
         <td><%= item.getId() %></td>
         <td><%= item.getName() %></td>
         <td><%= item.getDescription() %></td>
         <td><%= item.getPrice() %></td>
-        <td><%= item.getStock() %></td>
         <td><%= item.getCategoryId() %></td>
-        <td><%= item.getUrl() %></td>
+        <td><%= item.getStock() %></td>
+        <td>
+            <img src="./assets/images/<%= item.getUrl() %>" alt="<%= item.getName() %>" width="100" height="100">
+        </td>
+        <td>
+            <form action="Item" method="post">
+                <input type="hidden" name="action" value="delete">
+                <input type="hidden" name="itemId" value="<%= item.getId() %>">
+                <button type="submit" class="btn btn-danger">
+                    <ion-icon name="trash"></ion-icon>
+                </button>
+            </form>
+        </td>
     </tr>
     <%
+            }
         }
     %>
     </tbody>
 </table>
+
 <%
-    }
+
 %>
 
 
@@ -288,6 +350,9 @@
 <!-- Google Map -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
 <!-- End Google Map -->
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 </body>
 </html>

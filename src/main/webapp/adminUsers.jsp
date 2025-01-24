@@ -145,17 +145,17 @@
 
 <hr>
 
-<div class="m-5"><h4>Delete User</h4></div>
+<%--<div class="m-5"><h4>Delete User</h4></div>--%>
 
-<form class="row g-3 m-5" action="user-delete" method="post">
-    <div class="col-md-6">
-        <label for="userId" class="form-label">User ID</label>
-        <input type="text" name="id" class="form-control" id="userId">
-    </div>
-    <div class="col-12">
-        <button type="danger" class="btn btn-primary mt-3">Delete</button>
-    </div>
-</form>
+<%--<form class="row g-3 m-5" action="user-delete" method="post">--%>
+<%--    <div class="col-md-6">--%>
+<%--        <label for="userId" class="form-label">User ID</label>--%>
+<%--        <input type="text" name="id" class="form-control" id="userId">--%>
+<%--    </div>--%>
+<%--    <div class="col-12">--%>
+<%--        <button type="danger" class="btn btn-primary mt-3">Delete</button>--%>
+<%--    </div>--%>
+<%--</form>--%>
 
 <h3 class="m-5">Users list</h3>
 

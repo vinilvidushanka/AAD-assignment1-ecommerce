@@ -7,19 +7,19 @@ public class ItemDTO {
     private double price;
     private int categoryId;
     private int stock;
-    private String image;
+    private String url;
 
     public ItemDTO() {
     }
 
-    public ItemDTO(int id, String name, String description, double price, int categoryId, int stock, String image) {
+    public ItemDTO(int id, String name, String description, double price, int categoryId, int stock, String url) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.price = price;
         this.categoryId = categoryId;
         this.stock = stock;
-        this.image = image;
+        this.url = url;
     }
 
     public int getId() {
@@ -70,12 +70,12 @@ public class ItemDTO {
         this.stock = stock;
     }
 
-    public String getImage() {
-        return image;
+    public String getUrl() {
+        return url;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     @Override
@@ -87,7 +87,7 @@ public class ItemDTO {
                 ", price=" + price +
                 ", categoryId=" + categoryId +
                 ", stock=" + stock +
-                ", image='" + image + '\'' +
+                ", url='" + url + '\'' +
                 '}';
     }
 }

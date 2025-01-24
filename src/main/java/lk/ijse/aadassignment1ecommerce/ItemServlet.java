@@ -27,16 +27,16 @@ public class ItemServlet extends HttpServlet {
             Double price = Double.valueOf(req.getParameter("price"));
             int stock = Integer.parseInt(req.getParameter("stock"));
             String category_id = req.getParameter("categoryId");
-            String image = req.getParameter("itemImg");
+            String url = req.getParameter("url");
 
             java.sql.Connection connection = dataSource.getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement("insert into products(name, description, price, stock, category_id, image) values(?, ?, ?, ?, ?,?)");
+            PreparedStatement preparedStatement = connection.prepareStatement("insert into products(name, description, price, stock, category_id, url) values(?, ?, ?, ?, ?,?)");
             preparedStatement.setString(1, name);
             preparedStatement.setString(2, description);
             preparedStatement.setDouble(3, price);
             preparedStatement.setInt(4, stock);
             preparedStatement.setInt(5, Integer.parseInt(category_id));
-            preparedStatement.setString(6, image);
+            preparedStatement.setString(6, url);
 
             int rowsAffected = preparedStatement.executeUpdate();
             preparedStatement.close();

@@ -124,7 +124,7 @@
     </div>
     <div class="col-md-4">
         <label for="itemImg" class="form-label">Image</label>
-        <input type="file" name="itemImg" class="form-control" id="itemImg" accept="image/*">
+        <input type="file" name="url" class="form-control" id="itemImg" accept="image/*">
     </div>
     <div class="col-md-4">
         <label for="price" class="form-label">Price</label>
@@ -176,7 +176,7 @@
         <td><%= item.getPrice() %></td>
         <td><%= item.getStock() %></td>
         <td><%= item.getCategoryId() %></td>
-        <td><%= item.getImage() %></td>
+        <td><%= item.getUrl() %></td>
     </tr>
     <%
         }

@@ -50,7 +50,7 @@
                             <a class="nav-link" href="about.jsp"> About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="shop.jsp">Shop</a>
+                            <a class="nav-link" href="item-all">Shop</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="category.jsp">Categories</a>

@@ -151,6 +151,7 @@
     <th>ID</th>
     <th>Name</th>
     <th>Description</th>
+    <th>Action</th>
   </tr>
   </thead>
   <tbody>
@@ -161,6 +162,15 @@
     <td><%= category.getId() %></td>
     <td><%= category.getName() %></td>
     <td><%= category.getDescription() %></td>
+    <td>
+      <form action="Categories" method="post">
+        <input type="hidden" name="action" value="delete">
+        <input type="hidden" name="categoryId" value="<%= category.getId() %>">
+        <button type="submit" class="btn btn-danger">
+          <ion-icon name="trash"></ion-icon>
+        </button>
+      </form>
+    </td>
   </tr>
   <%
     }
@@ -272,6 +282,9 @@
 <!-- Google Map -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
 <!-- End Google Map -->
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 </body>
 </html>

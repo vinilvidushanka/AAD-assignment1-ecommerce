@@ -10,8 +10,10 @@ import lk.ijse.aadassignment1ecommerce.DTO.UserDTO;
 
 import javax.sql.DataSource;
 import java.io.IOException;
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 @WebServlet(name = "UserServlet", value = "/user")
@@ -23,6 +25,15 @@ public class UserServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
+
+            String action = req.getParameter("action");
+
+            if ("delete".equals(action)) {
+                doDelete(req, resp);
+            } else {
+                // Handle other actions if needed
+            }
+
             String name = req.getParameter("userName");
             String email = req.getParameter("email");
             String password = req.getParameter("password");
@@ -59,6 +70,8 @@ public class UserServlet extends HttpServlet {
             req.getSession().setAttribute("alertType", "error");
             resp.sendRedirect("adminUsers.jsp");
         }
+
+
     }
 
     @Override
@@ -86,4 +99,33 @@ public class UserServlet extends HttpServlet {
         }
     }
 
+    @Override
+    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String userId = req.getParameter("userId");
+
+            try (Connection connection = dataSource.getConnection()) {
+                String sql = "DELETE FROM users WHERE user_id = ?";
+                try (PreparedStatement ps = connection.prepareStatement(sql)) {
+                    ps.setInt(1, Integer.parseInt(userId));
+                    int rowsAffected = ps.executeUpdate();
+
+                    if (rowsAffected > 0) {
+                        req.setAttribute("message", "User deleted successfully.");
+                        req.getSession().setAttribute("alertType", "success");
+                    } else {
+                        req.setAttribute("error", "Failed to delete the user.");
+                        req.getSession().setAttribute("alertType", "error");
+                    }
+                    resp.sendRedirect("adminUsers.jsp");
+                }
+            } catch (NumberFormatException e) {
+                req.setAttribute("error", "Invalid user ID format.");
+            } catch (SQLException e) {
+                req.setAttribute("error", "Database error: " + e.getMessage());
+            }
+
+    }
+
 }
+
+

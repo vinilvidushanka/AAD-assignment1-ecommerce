@@ -139,10 +139,12 @@
     <div class="col-12">
         <button type="submit" class="btn btn-primary mt-3">Save</button>
         <button type="submit" class="btn btn-primary mt-3">Update</button>
+        <button type="danger" class="btn btn-primary mt-3">Delete</button>
     </div>
 </form>
 
 <hr>
+
 <div class="m-5"><h4>Delete User</h4></div>
 
 <form class="row g-3 m-5" action="user-delete" method="post">
@@ -158,6 +160,21 @@
 <h3 class="m-5">Users list</h3>
 
 <%
+    String deleteMessage = (String) session.getAttribute("message");
+    String deleteAlertType = (String) session.getAttribute("alertType");
+    if (deleteMessage != null && deleteAlertType != null) {
+%>
+<script>
+    alert('<%= deleteMessage %>');
+</script>
+<%
+        // Clear the session attributes after displaying the alert
+        session.removeAttribute("message");
+        session.removeAttribute("alertType");
+    }
+%>
+
+<%
     List<UserDTO> userList = (List<UserDTO>) request.getAttribute("users");
     if(userList != null && !userList.isEmpty()) {
 
@@ -170,6 +187,7 @@
         <th>Email</th>
         <th>Role</th>
         <th>Password</th>
+        <th>Action</th>
     </tr>
     </thead>
     <tbody>
@@ -182,6 +200,16 @@
         <td><%= user.getEmail() %></td>
         <td><%= user.getRole() %></td>
         <td><%= user.getPassword() %></td>
+        <td>
+            <form action="user" method="post">
+                <input type="hidden" name="action" value="delete">
+                <input type="hidden" name="userId" value="<%= user.getId() %>">
+                <button type="submit" class="btn btn-danger">
+                    <ion-icon name="trash"></ion-icon>
+                </button>
+            </form>
+        </td>
+<%--        <td><button type="button" class="btn btn-danger"><ion-icon name="trash"></ion-icon></button> </td>--%>
     </tr>
     <%
         }

@@ -23,6 +23,7 @@
             padding: 8px;
             text-align: left;
         }
+
     </style>
 
     <!-- bootstrap core css -->
@@ -61,7 +62,7 @@
                             <a class="nav-link" href="adminHome.jsp">Home </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="adminItems.jsp">Items</a>
+                            <a class="nav-link" href="Item">Items</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="Categories">Categories</a>
@@ -138,6 +139,18 @@
     <div class="col-12">
         <button type="submit" class="btn btn-primary mt-3">Save</button>
         <button type="submit" class="btn btn-primary mt-3">Update</button>
+    </div>
+</form>
+
+<hr>
+<div class="m-5"><h4>Delete User</h4></div>
+
+<form class="row g-3 m-5" action="user-delete" method="post">
+    <div class="col-md-6">
+        <label for="userId" class="form-label">User ID</label>
+        <input type="text" name="id" class="form-control" id="userId">
+    </div>
+    <div class="col-12">
         <button type="danger" class="btn btn-primary mt-3">Delete</button>
     </div>
 </form>
@@ -280,6 +293,9 @@
 <!-- Google Map -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
 <!-- End Google Map -->
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 </body>
 </html>

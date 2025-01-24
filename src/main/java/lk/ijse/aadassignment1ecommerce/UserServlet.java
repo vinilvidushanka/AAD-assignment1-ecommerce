@@ -17,8 +17,8 @@ import java.util.ArrayList;
 @WebServlet(name = "UserServlet", value = "/user")
 public class UserServlet extends HttpServlet {
 
-    @Resource(name = "java:comp/env/jdbc/pool")
-    private DataSource dataSource;
+        @Resource(name = "java:comp/env/jdbc/pool")
+        private DataSource dataSource;
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

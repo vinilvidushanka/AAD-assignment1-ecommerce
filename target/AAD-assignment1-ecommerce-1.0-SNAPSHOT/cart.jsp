@@ -1,4 +1,5 @@
-<%--
+<%@ page import="lk.ijse.aadassignment1ecommerce.DTO.CartDTO" %>
+<%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: User
   Date: 1/20/2025
@@ -59,7 +60,7 @@
                             <a class="nav-link" href="contact.jsp">Contact Us</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="cart.jsp">Cart</a>
+                            <a class="nav-link" href="cart">Cart</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="index.jsp">Log Out</a>
@@ -84,6 +85,51 @@
     </header>
     <!-- end header section -->
 </div>
+
+
+<table class="m-5">
+    <thead>
+    <tr>
+        <th>Cart ID</th>
+        <th>Product</th>
+        <th>QTY</th>
+        <th>Price</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <%
+        List<CartDTO> cartList = (List<CartDTO>) request.getAttribute("items");
+        System.out.println("itemList: " + cartList);
+        if (cartList != null) {
+            for (CartDTO cart : cartList) {
+    %>
+    <tr>
+        <td><%= cart.getCartId() %></td>
+        <td><%= cart.getUserId() %></td>
+        <td><%= cart.getProductId() %></td>
+        <td><%= cart.getQty() %></td>
+
+        <td>
+            <form action="cart" method="post">
+                <input type="hidden" name="action" value="delete">
+                <input type="hidden" name="itemId" value="<%= cart.getCartId() %>">
+                <button type="submit" class="btn btn-danger">
+                    <ion-icon name="trash"></ion-icon>
+                </button>
+            </form>
+        </td>
+    </tr>
+    <%
+            }
+        }
+    %>
+    </tbody>
+</table>
+
+<%
+
+%>
 
 
 

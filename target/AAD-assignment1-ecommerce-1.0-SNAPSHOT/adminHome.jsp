@@ -118,8 +118,8 @@
               <div class="col-md-5">
                 <div class="detail-box">
                   <h1>
-                    For All Your <br>
-                    Watch Needs
+                    Welcome to <br>
+                    Admin dashboard
                   </h1>
                   <p>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quidem maiores perspiciatis, illo maxime voluptatem a itaque suscipit.
@@ -148,8 +148,8 @@
               <div class="col-md-5">
                 <div class="detail-box">
                   <h1>
-                    For All Your <br>
-                    Watch Needs
+                    Welcome to <br>
+                    Admin dashboard
                   </h1>
                   <p>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quidem maiores perspiciatis, illo maxime voluptatem a itaque suscipit.
@@ -183,291 +183,7 @@
   <!-- end slider section -->
 </div>
 
-<!-- furniture section -->
 
-<section class="furniture_section layout_padding">
-  <div class="container">
-    <div class="heading_container">
-      <h2>
-        Pear-Watch Products
-      </h2>
-      <p>
-        which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't an
-      </p>
-    </div>
-    <div class="row">
-      <div class="col-md-6 col-lg-4">
-        <div class="box">
-          <div class="img-box">
-            <img src="images/watch-1-600x600.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Chrome Watch
-            </h5>
-            <div class="price_box">
-              <h6 class="price_heading">
-                <span>RS</span> 1990.00
-              </h6>
-              <a href="">
-                Add to Cart
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="box">
-          <div class="img-box">
-            <img src="images/3-e1711870791227.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Meimi M2 Kids Smart Watch
-            </h5>
-            <div class="price_box">
-              <h6 class="price_heading">
-                <span>RS</span> 5200.00
-              </h6>
-              <a href="">
-                Add to Cart
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="box">
-          <div class="img-box">
-            <img src="images/download%20(1).jpg" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              t800 ultra smart watch
-            </h5>
-            <div class="price_box">
-              <h6 class="price_heading">
-                <span>RS</span> 8290.00
-              </h6>
-              <a href="">
-                Add to Cart
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="box">
-          <div class="img-box">
-            <img src="images/images%20(4).jpg" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              t900 ultra smart watch
-            </h5>
-            <div class="price_box">
-              <h6 class="price_heading">
-                <span>RS</span> 9990.00
-              </h6>
-              <a href="">
-                Add to Cart
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="box">
-          <div class="img-box">
-            <img src="images/2c74191c30c34b6608df298f9053f692.jpg" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              G9 Ultra Pro Smart Watch
-            </h5>
-            <div class="price_box">
-              <h6 class="price_heading">
-                <span>RS</span> 12200.00
-              </h6>
-              <a href="">
-                Add to Cart
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4">
-        <div class="box">
-          <div class="img-box">
-            <img src="images/download%20(2).jpg" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Rolex GMT Master II
-            </h5>
-            <div class="price_box">
-              <h6 class="price_heading">
-                <span>RS</span> 15290.00
-              </h6>
-              <a href="">
-                Add to Cart
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- end furniture section -->
-
-
-<!-- about section -->
-
-<section class="about_section layout_padding long_section">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="img-box">
-          <img src="images/3-e1711870791227.png" alt="">
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="detail-box">
-          <div class="heading_container">
-            <h2>
-              About Us
-            </h2>
-          </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti dolorem eum consequuntur ipsam repellat dolor soluta aliquid laborum, eius odit consectetur vel quasi in quidem, eveniet ab est corporis tempore.
-          </p>
-          <a href="">
-            Read More
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- end about section -->
-
-<!-- blog section -->
-
-<section class="blog_section layout_padding">
-  <div class="container">
-    <div class="heading_container">
-      <h2>
-        Categories
-      </h2>
-    </div>
-    <div class="row">
-      <div class="col-md-6 col-lg-4 mx-auto">
-        <div class="box">
-          <div class="img-box">
-            <img src="images/images%20(4).jpg" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Smart Watch
-            </h5>
-            <p>
-              alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-            </p>
-            <a href="">
-              Read More
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 mx-auto">
-        <div class="box">
-          <div class="img-box">
-            <img src="images/download%20(2).jpg" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Classic Watch
-            </h5>
-            <p>
-              alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-            </p>
-            <a href="">
-              Read More
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-4 mx-auto">
-        <div class="box">
-          <div class="img-box">
-            <img src="images/3-e1711870791227.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Kids Watch
-            </h5>
-            <p>
-              alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-            </p>
-            <a href="">
-              Read More
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- end blog section -->
-
-
-<!-- contact section -->
-<section class="contact_section  long_section">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="form_container">
-          <div class="heading_container">
-            <h2>
-              Contact Us
-            </h2>
-          </div>
-          <form action="">
-            <div>
-              <input type="text" placeholder="Your Name" />
-            </div>
-            <div>
-              <input type="text" placeholder="Phone Number" />
-            </div>
-            <div>
-              <input type="email" placeholder="Email" />
-            </div>
-            <div>
-              <input type="text" class="message-box" placeholder="Message" />
-            </div>
-            <div class="btn_box">
-              <button>
-                SEND
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="map_container">
-          <div class="map">
-            <div id="googleMap"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- end contact section -->
 
 <!-- info section -->
 <section class="info_section long_section">
@@ -475,19 +191,19 @@
   <div class="container">
     <div class="contact_nav">
       <a href="">
-        <i class="fa fa-phone" aria-hidden="true"></i>
+        <ion-icon name="call"></ion-icon>
         <span>
             Call : +94 701234567
           </span>
       </a>
       <a href="">
-        <i class="fa fa-envelope" aria-hidden="true"></i>
+        <ion-icon name="mail-open-outline"></ion-icon>
         <span>
             Email : luxywatch@gmail.com
           </span>
       </a>
       <a href="">
-        <i class="fa fa-map-marker" aria-hidden="true"></i>
+        <ion-icon name="location"></ion-icon>
         <span>
             Sri Lanka
           </span>
@@ -502,12 +218,12 @@
               QUICK LINKS
             </h4>
             <div class="info_links_menu">
-              <a class="" href="home.jsp">Home <span class="sr-only">(current)</span></a>
-              <a class="" href="about.jsp"> About</a>
-              <a class="" href="shop.jsp">Shop</a>
-              <a class="" href="category.jsp">Categories</a>
-              <a class="" href="contact.jsp">Contact Us</a>
-              <a class="" href="cart.jsp">Cart</a>
+              <a class="" href="adminHome.jsp">Home <span class="sr-only">(current)</span></a>
+              <a class="" href="Item"> Items</a>
+              <a class="" href="Categories">Categories</a>
+              <a class="" href="user">Users</a>
+              <a class="" href="adminOrders.jsp">Orders</a>
+              <a class="" href="index.jsp">Log Out</a>
             </div>
           </div>
         </div>
@@ -527,16 +243,16 @@
             </form>
             <div class="social_box">
               <a href="">
-                <i class="fa fa-facebook" aria-hidden="true"></i>
+                <ion-icon name="logo-facebook"></ion-icon>
               </a>
               <a href="">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
+                <ion-icon name="logo-twitter"></ion-icon>
               </a>
               <a href="">
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                <ion-icon name="logo-linkedin"></ion-icon>
               </a>
               <a href="">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <ion-icon name="logo-instagram"></ion-icon>
               </a>
             </div>
           </div>
@@ -569,6 +285,9 @@
 <!-- Google Map -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
 <!-- End Google Map -->
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 </body>
 </html>

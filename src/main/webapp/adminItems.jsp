@@ -256,19 +256,19 @@
     <div class="container">
         <div class="contact_nav">
             <a href="">
-                <i class="fa fa-phone" aria-hidden="true"></i>
+                <ion-icon name="call"></ion-icon>
                 <span>
             Call : +94 701234567
           </span>
             </a>
             <a href="">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <ion-icon name="mail-open-outline"></ion-icon>
                 <span>
             Email : luxywatch@gmail.com
           </span>
             </a>
             <a href="">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <ion-icon name="location"></ion-icon>
                 <span>
             Sri Lanka
           </span>
@@ -283,12 +283,12 @@
                             QUICK LINKS
                         </h4>
                         <div class="info_links_menu">
-                            <a class="" href="home.jsp">Home <span class="sr-only">(current)</span></a>
-                            <a class="" href="about.jsp"> About</a>
-                            <a class="" href="shop.jsp">Shop</a>
-                            <a class="" href="category.jsp">Categories</a>
-                            <a class="" href="contact.jsp">Contact Us</a>
-                            <a class="" href="cart.jsp">Cart</a>
+                            <a class="" href="adminHome.jsp">Home <span class="sr-only">(current)</span></a>
+                            <a class="" href="Item"> Items</a>
+                            <a class="" href="Categories">Categories</a>
+                            <a class="" href="user">Users</a>
+                            <a class="" href="adminOrders.jsp">Orders</a>
+                            <a class="" href="index.jsp">Log Out</a>
                         </div>
                     </div>
                 </div>
@@ -308,16 +308,16 @@
                         </form>
                         <div class="social_box">
                             <a href="">
-                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                <ion-icon name="logo-facebook"></ion-icon>
                             </a>
                             <a href="">
-                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                                <ion-icon name="logo-twitter"></ion-icon>
                             </a>
                             <a href="">
-                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                <ion-icon name="logo-linkedin"></ion-icon>
                             </a>
                             <a href="">
-                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                <ion-icon name="logo-instagram"></ion-icon>
                             </a>
                         </div>
                     </div>

@@ -17,7 +17,7 @@
         <h2 class="title">Sign in</h2>
         <div class="input-field">
           <i class="fas fa-user"></i>
-          <input type="text" placeholder="Username" />
+          <input type="text" placeholder="E mail" />
         </div>
         <div class="input-field">
           <i class="fas fa-lock"></i>
@@ -31,16 +31,16 @@
         <p class="social-text">Or Sign in with social platforms</p>
         <div class="social-media">
           <a href="#" class="social-icon">
-            <i class="fab fa-facebook-f"></i>
+            <ion-icon name="logo-facebook"></ion-icon>
           </a>
           <a href="#" class="social-icon">
-            <i class="fab fa-twitter"></i>
+            <ion-icon name="logo-twitter"></ion-icon>
           </a>
           <a href="#" class="social-icon">
-            <i class="fab fa-google"></i>
+            <ion-icon name="logo-linkedin"></ion-icon>
           </a>
           <a href="#" class="social-icon">
-            <i class="fab fa-linkedin-in"></i>
+            <ion-icon name="logo-instagram"></ion-icon>
           </a>
         </div>
       </form>
@@ -62,16 +62,16 @@
         <p class="social-text">Or Sign up with social platforms</p>
         <div class="social-media">
           <a href="#" class="social-icon">
-            <i class="fab fa-facebook-f"></i>
+            <ion-icon name="logo-facebook"></ion-icon>
           </a>
           <a href="#" class="social-icon">
-            <i class="fab fa-twitter"></i>
+            <ion-icon name="logo-twitter"></ion-icon>
           </a>
           <a href="#" class="social-icon">
-            <i class="fab fa-google"></i>
+            <ion-icon name="logo-linkedin"></ion-icon>
           </a>
           <a href="#" class="social-icon">
-            <i class="fab fa-linkedin-in"></i>
+            <ion-icon name="logo-instagram"></ion-icon>
           </a>
         </div>
       </form>
@@ -129,5 +129,9 @@
 
 <script src="assets/jquery-3.7.1.min.js"></script>
 <script src="JS/index.js"></script>
+
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </body>
 </html>

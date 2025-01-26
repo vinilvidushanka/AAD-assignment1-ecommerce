@@ -11,6 +11,20 @@
 <head>
     <title>LUXYWatch</title>
 
+    <style>
+        table{
+            border-collapse: collapse;
+            width: 90%;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+    </style>
 
     <!-- bootstrap core css -->
     <link rel="stylesheet" type="text/css" href="CSS/bootstrap.css" />
@@ -60,32 +74,21 @@
                             <a class="nav-link" href="contact.jsp">Contact Us</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="cart">Cart</a>
+                            <a class="nav-link" href="cart.jsp">Cart</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="index.jsp">Log Out</a>
                         </li>
                     </ul>
                 </div>
-                <div class="quote_btn-container">
-<%--                    <a href="">--%>
-<%--              <span>--%>
-<%--                Log Out--%>
-<%--              </span>--%>
-<%--                        <i class="fa fa-user" aria-hidden="true"></i>--%>
-<%--                    </a>--%>
-                    <form class="form-inline">
-                        <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                            <i class="fa fa-search" aria-hidden="true"></i>
-                        </button>
-                    </form>
-                </div>
+
             </div>
         </nav>
     </header>
     <!-- end header section -->
 </div>
 
+<div class="m-5"><h4>Cart</h4></div>
 
 <table class="m-5">
     <thead>

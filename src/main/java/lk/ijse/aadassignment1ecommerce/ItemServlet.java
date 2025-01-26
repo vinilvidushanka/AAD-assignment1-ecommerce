@@ -64,33 +64,7 @@ public class ItemServlet extends HttpServlet {
         }
     }
 
-//    @Override
-//    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        try {
-//            java.sql.Connection connection = dataSource.getConnection();
-//            ResultSet resultSet = connection.prepareStatement("select * from products").executeQuery();
-//
-//            ArrayList<ItemDTO> items = new ArrayList<>();
-//
-//            while (resultSet.next()) {
-//                int id = resultSet.getInt("product_id");
-//                String name = resultSet.getString("name");
-//                String description = resultSet.getString("description");
-//                double price = resultSet.getDouble("price");
-//                int stock = resultSet.getInt("stock");
-//                int category_id = resultSet.getInt("category_id");
-//                String url = resultSet.getString("image");
-//
-//                ItemDTO item = new ItemDTO(id, name, description, price, stock, category_id, url);
-//                items.add(item);
-//            }
-//
-//            req.setAttribute("items", items);
-//            req.getRequestDispatcher("adminItems.jsp").forward(req, resp);
-//        } catch (Exception e) {
-//            resp.sendRedirect("adminItems.jsp?error=An error occurred: " + e.getMessage());
-//        }
-//    }
+
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

@@ -24,45 +24,6 @@ public class ItemAllServlet extends HttpServlet {
     private DataSource dataSource;
 
 
-//    @Override
-//    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//
-//        List<ItemDTO> itemDtoList = new ArrayList<>();
-//        System.out.println(itemDtoList==null);
-//        try {
-//            Connection connection = dataSource.getConnection();
-//            PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM products");
-//            ResultSet resultSet = preparedStatement.executeQuery();
-//            while (resultSet.next()) {
-//                int id = Integer.parseInt(resultSet.getString(1));
-//                String name = resultSet.getString(2);
-//                String description = resultSet.getString(3);
-//                double price = Double.parseDouble(resultSet.getString(4));
-//                int stock = Integer.parseInt(resultSet.getString(6));
-//                int catagoryId = Integer.parseInt(resultSet.getString(5));
-//                String url = resultSet.getString(7);
-//                System.out.println(id + name + description + price + stock + catagoryId +  url + "servelete");
-//
-//                ItemDTO itemDTO = new ItemDTO(id, name, description, price, stock, catagoryId, url);
-//                itemDtoList.add(itemDTO);
-//
-//                System.out.println(itemDtoList);
-//                System.out.println("item awada");
-//
-//            }
-//            req.setAttribute("itemDtoList", itemDtoList);
-//            System.out.println(itemDtoList);
-//            System.out.println("methnt awd");
-//// Forward the request to the JSP
-//            RequestDispatcher dispatcher = req.getRequestDispatcher("shop.jsp");
-//            dispatcher.forward(req, resp);
-//        } catch (SQLException e) {
-//            throw new RuntimeException(e);
-//        }
-//
-//    }
-
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<ItemDTO> itemDtoList = new ArrayList<>();

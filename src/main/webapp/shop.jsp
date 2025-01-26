@@ -63,33 +63,21 @@
               <a class="nav-link" href="contact.jsp">Contact Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="cart">Cart</a>
+              <a class="nav-link" href="cart.jsp">Cart</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="index.jsp">Log Out</a>
             </li>
           </ul>
         </div>
-        <div class="quote_btn-container">
-<%--          <a href="index.jsp">--%>
-<%--              <span>--%>
-<%--                Log Out--%>
-<%--              </span>--%>
-<%--            <i class="fa fa-user" aria-hidden="true"></i>--%>
-<%--          </a>--%>
-          <form class="form-inline">
-<%--            <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">--%>
-<%--              <i class="fa fa-search" aria-hidden="true"></i>--%>
-<%--            </button>--%>
-          </form>
-        </div>
+
       </div>
     </nav>
   </header>
   <!-- end header section -->
 </div>
 
-<!-- furniture section -->
+<!-- shop section -->
 
 <section class="furniture_section layout_padding">
   <div class="container">
@@ -102,128 +90,6 @@
       </p>
     </div>
 
-<%--    <div class="row">--%>
-<%--      <div class="col-md-6 col-lg-4">--%>
-<%--        <div class="box">--%>
-<%--          <div class="img-box">--%>
-<%--            <img src="images/watch-1-600x600.png" alt="">--%>
-<%--          </div>--%>
-<%--          <div class="detail-box">--%>
-<%--            <h5>--%>
-<%--              Chrome Watch--%>
-<%--            </h5>--%>
-<%--            <div class="price_box">--%>
-<%--              <h6 class="price_heading">--%>
-<%--                <span>RS</span> 1990.00--%>
-<%--              </h6>--%>
-<%--              <a href="">--%>
-<%--                Add to Cart--%>
-<%--              </a>--%>
-<%--            </div>--%>
-<%--          </div>--%>
-<%--        </div>--%>
-<%--      </div>--%>
-<%--      <div class="col-md-6 col-lg-4">--%>
-<%--        <div class="box">--%>
-<%--          <div class="img-box">--%>
-<%--            <img src="images/3-e1711870791227.png" alt="">--%>
-<%--          </div>--%>
-<%--          <div class="detail-box">--%>
-<%--            <h5>--%>
-<%--              Meimi M2 Kids Smart Watch--%>
-<%--            </h5>--%>
-<%--            <div class="price_box">--%>
-<%--              <h6 class="price_heading">--%>
-<%--                <span>RS</span> 5200.00--%>
-<%--              </h6>--%>
-<%--              <a href="">--%>
-<%--                Add to Cart--%>
-<%--              </a>--%>
-<%--            </div>--%>
-<%--          </div>--%>
-<%--        </div>--%>
-<%--      </div>--%>
-<%--      <div class="col-md-6 col-lg-4">--%>
-<%--        <div class="box">--%>
-<%--          <div class="img-box">--%>
-<%--            <img src="images/download (1).jpg" alt="">--%>
-<%--          </div>--%>
-<%--          <div class="detail-box">--%>
-<%--            <h5>--%>
-<%--              t800 ultra smart watch--%>
-<%--            </h5>--%>
-<%--            <div class="price_box">--%>
-<%--              <h6 class="price_heading">--%>
-<%--                <span>RS</span> 8290.00--%>
-<%--              </h6>--%>
-<%--              <a href="">--%>
-<%--                Add to Cart--%>
-<%--              </a>--%>
-<%--            </div>--%>
-<%--          </div>--%>
-<%--        </div>--%>
-<%--      </div>--%>
-<%--      <div class="col-md-6 col-lg-4">--%>
-<%--        <div class="box">--%>
-<%--          <div class="img-box">--%>
-<%--            <img src="images/images (4).jpg" alt="">--%>
-<%--          </div>--%>
-<%--          <div class="detail-box">--%>
-<%--            <h5>--%>
-<%--              t900 ultra smart watch--%>
-<%--            </h5>--%>
-<%--            <div class="price_box">--%>
-<%--              <h6 class="price_heading">--%>
-<%--                <span>RS</span> 9990.00--%>
-<%--              </h6>--%>
-<%--              <a href="">--%>
-<%--                Add to Cart--%>
-<%--              </a>--%>
-<%--            </div>--%>
-<%--          </div>--%>
-<%--        </div>--%>
-<%--      </div>--%>
-<%--      <div class="col-md-6 col-lg-4">--%>
-<%--        <div class="box">--%>
-<%--          <div class="img-box">--%>
-<%--            <img src="images/2c74191c30c34b6608df298f9053f692.jpg" alt="">--%>
-<%--          </div>--%>
-<%--          <div class="detail-box">--%>
-<%--            <h5>--%>
-<%--              G9 Ultra Pro Smart Watch--%>
-<%--            </h5>--%>
-<%--            <div class="price_box">--%>
-<%--              <h6 class="price_heading">--%>
-<%--                <span>RS</span> 12200.00--%>
-<%--              </h6>--%>
-<%--              <a href="">--%>
-<%--                Add to Cart--%>
-<%--              </a>--%>
-<%--            </div>--%>
-<%--          </div>--%>
-<%--        </div>--%>
-<%--      </div>--%>
-<%--      <div class="col-md-6 col-lg-4">--%>
-<%--        <div class="box">--%>
-<%--          <div class="img-box">--%>
-<%--            <img src="images/download (2).jpg" alt="">--%>
-<%--          </div>--%>
-<%--          <div class="detail-box">--%>
-<%--            <h5>--%>
-<%--              Rolex GMT Master II--%>
-<%--            </h5>--%>
-<%--            <div class="price_box">--%>
-<%--              <h6 class="price_heading">--%>
-<%--                <span>RS</span> 15290.00--%>
-<%--              </h6>--%>
-<%--              <a href="">--%>
-<%--                Add to Cart--%>
-<%--              </a>--%>
-<%--            </div>--%>
-<%--          </div>--%>
-<%--        </div>--%>
-<%--      </div>--%>
-<%--    </div>--%>
 
     <ul class="product-list">
       <%
@@ -293,7 +159,7 @@
   </div>
 </section>
 
-<!-- end furniture section -->
+<!-- end shop section -->
 
 <!-- info section -->
 <section class="info_section long_section">

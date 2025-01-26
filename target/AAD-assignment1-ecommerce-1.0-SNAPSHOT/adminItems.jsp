@@ -77,19 +77,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="quote_btn-container">
-                    <%--                    <a href="">--%>
-                    <%--              <span>--%>
-                    <%--                Log Out--%>
-                    <%--              </span>--%>
-                    <%--                        <i class="fa fa-user" aria-hidden="true"></i>--%>
-                    <%--                    </a>--%>
-                    <form class="form-inline">
-                        <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                            <i class="fa fa-search" aria-hidden="true"></i>
-                        </button>
-                    </form>
-                </div>
+
             </div>
         </nav>
     </header>
@@ -141,62 +129,12 @@
     <div class="col-12">
         <button type="submit" class="btn btn-primary mt-3">Save</button>
         <button type="submit" class="btn btn-primary mt-3">Update</button>
-        <button type="danger" class="btn btn-primary mt-3">Delete</button>
     </div>
 </form>
 
 
 <h3 class="m-5">Items list</h3>
 
-<%--<%--%>
-<%--    List<ItemDTO> itemList = (List<ItemDTO>) request.getAttribute("items");--%>
-<%--    if(itemList != null && !itemList.isEmpty()) {--%>
-
-<%--%>--%>
-<%--<table class="m-5">--%>
-<%--    <thead>--%>
-<%--    <tr>--%>
-<%--        <th>ID</th>--%>
-<%--        <th>Name</th>--%>
-<%--        <th>Description</th>--%>
-<%--        <th>Price</th>--%>
-<%--        <th>Stock</th>--%>
-<%--        <th>Category ID</th>--%>
-<%--        <th>Image</th>--%>
-<%--        <th>Action</th>--%>
-<%--    </tr>--%>
-<%--    </thead>--%>
-<%--    <tbody>--%>
-<%--    <%--%>
-<%--        for (ItemDTO item : itemList) {--%>
-<%--    %>--%>
-<%--    <tr>--%>
-<%--        <td><%= item.getId() %></td>--%>
-<%--        <td><%= item.getName() %></td>--%>
-<%--        <td><%= item.getDescription() %></td>--%>
-<%--        <td><%= item.getPrice() %></td>--%>
-<%--        <td><%= item.getStock() %></td>--%>
-<%--        <td><%= item.getCategoryId() %></td>--%>
-<%--&lt;%&ndash;        <td><%= item.getUrl() %></td>&ndash;%&gt;--%>
-<%--        <td>--%>
-<%--            <img src="./assets/images/<%= item.getUrl() %>" alt="<%= item.getName() %>" width="100" height="100">--%>
-<%--        </td>--%>
-
-<%--        <td>--%>
-<%--            <form action="Item" method="post">--%>
-<%--                <input type="hidden" name="action" value="delete">--%>
-<%--                <input type="hidden" name="i    temId" value="<%= item.getId() %>">--%>
-<%--                <button type="submit" class="btn btn-danger">--%>
-<%--                    <ion-icon name="trash"></ion-icon>--%>
-<%--                </button>--%>
-<%--            </form>--%>
-<%--        </td>--%>
-<%--    </tr>--%>
-<%--    <%--%>
-<%--        }--%>
-<%--    %>--%>
-<%--    </tbody>--%>
-<%--</table>--%>
 
 <table class="m-5">
     <thead>

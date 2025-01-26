@@ -78,19 +78,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="quote_btn-container">
-                    <%--                    <a href="">--%>
-                    <%--              <span>--%>
-                    <%--                Log Out--%>
-                    <%--              </span>--%>
-                    <%--                        <i class="fa fa-user" aria-hidden="true"></i>--%>
-                    <%--                    </a>--%>
-                    <form class="form-inline">
-                        <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
-                            <i class="fa fa-search" aria-hidden="true"></i>
-                        </button>
-                    </form>
-                </div>
+
             </div>
         </nav>
     </header>
@@ -139,23 +127,10 @@
     <div class="col-12">
         <button type="submit" class="btn btn-primary mt-3">Save</button>
         <button type="submit" class="btn btn-primary mt-3">Update</button>
-        <button type="danger" class="btn btn-primary mt-3">Delete</button>
     </div>
 </form>
 
 <hr>
-
-<%--<div class="m-5"><h4>Delete User</h4></div>--%>
-
-<%--<form class="row g-3 m-5" action="user-delete" method="post">--%>
-<%--    <div class="col-md-6">--%>
-<%--        <label for="userId" class="form-label">User ID</label>--%>
-<%--        <input type="text" name="id" class="form-control" id="userId">--%>
-<%--    </div>--%>
-<%--    <div class="col-12">--%>
-<%--        <button type="danger" class="btn btn-primary mt-3">Delete</button>--%>
-<%--    </div>--%>
-<%--</form>--%>
 
 <h3 class="m-5">Users list</h3>
 
@@ -209,7 +184,6 @@
                 </button>
             </form>
         </td>
-<%--        <td><button type="button" class="btn btn-danger"><ion-icon name="trash"></ion-icon></button> </td>--%>
     </tr>
     <%
         }

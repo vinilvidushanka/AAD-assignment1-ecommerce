@@ -40,7 +40,7 @@ public class UserServlet extends HttpServlet {
             String role = req.getParameter("role");
 
             java.sql.Connection connection = dataSource.getConnection();
-            PreparedStatement preparedStatement = connection.prepareStatement("insert into users(username, email, role, password_hash) values(?, ?, ?, ?)");
+            PreparedStatement preparedStatement = connection.prepareStatement("insert into users(username, email, role, password) values(?, ?, ?, ?)");
             preparedStatement.setString(1, name);
             preparedStatement.setString(2, email);
             preparedStatement.setString(3, role);
@@ -87,7 +87,7 @@ public class UserServlet extends HttpServlet {
                 String name = resultSet.getString("username");
                 String email = resultSet.getString("email");
                 String role = resultSet.getString("role");
-                String password = resultSet.getString("password_hash");
+                String password = resultSet.getString("password");
 
                 UserDTO user = new UserDTO(id, name, email, password, role);
                 users.add(user);

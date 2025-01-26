@@ -13,19 +13,20 @@
 <div class="container">
   <div class="forms-container">
     <div class="signin-signup">
-      <form action="#" class="sign-in-form">
+      <form action="Login-save" method="post" class="sign-in-form">
         <h2 class="title">Sign in</h2>
         <div class="input-field">
           <i class="fas fa-user"></i>
-          <input type="text" placeholder="E mail" />
+          <input type="text" name="email" placeholder="E mail" />
         </div>
         <div class="input-field">
           <i class="fas fa-lock"></i>
-          <input type="password" placeholder="Password" />
+          <input type="password" name="password" placeholder="Password" />
         </div>
-        <button class="btn transparent" class="btn solid">
-          <a href="adminHome.jsp">Sign in</a>
-        </button>
+        <input type="submit" class="btn" value="Sign in" />
+<%--        <button class="btn transparent" class="btn solid" value="Sign In">--%>
+<%--&lt;%&ndash;          <a href="adminHome.jsp">Sign in</a>&ndash;%&gt;--%>
+<%--        </button>--%>
 
 <%--        <input type="submit" value="Login" class="btn solid" />--%>
         <p class="social-text">Or Sign in with social platforms</p>
